@@ -1,82 +1,66 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Light Theme</title>
-<link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!-- Main Container -->
-<div class="container"> 
-  <!-- Header -->
-  <header class="header">
-    <h4 class="logo">GRID</h4>
-  </header>
-  <!-- Hero Section -->
-  <section class="intro">
-    <div class="column">
-      <h3>JOHN DOE</h3>
-      <img src="images/profile.png" alt="" class="profile"> </div>
-    <div class="column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3.js</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      #app {
+        display: flex;
+        margin: 2rem 1rem;
+      }
+
+      #chart {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        padding: 1rem;
+      }
+
+      #chart,
+      #data {
+        margin: 0 2rem;
+      }
+
+      #data ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #data li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        width: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .bar {
+        fill: #4f009e;
+      }
+
+      .label {
+        fill: #4f009e;
+      }
+    </style>
+    <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="chart">
+        <svg></svg>
+      </div>
+      <div id="data">
+        <ul></ul>
+      </div>
     </div>
-  </section>
-  <!-- Stats Gallery Section -->
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <!-- Footer Section -->
-  <footer id="contact">
-    <p class="hero_header">GET IN TOUCH WITH ME</p>
-    <div class="button">EMAIL ME </div>
-  </footer>
-  <!-- Copyrights Section -->
-  <div class="copyright">&copy;2021 - <strong>GRID</strong></div>
-</div>
-<!-- Main Container Ends -->
-</body>
+  </body>
 </html>
